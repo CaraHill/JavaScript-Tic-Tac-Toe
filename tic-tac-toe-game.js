@@ -3,8 +3,9 @@ function TicTacToeGame() {
 }
 
 TicTacToeGame.prototype = {
-  placePiece = function(clickedSpace) {
-    var $piece = "X";
-    clickedSpace.append($piece);
+  placePiece: function(clickedSpace, playerOne) {
+    if($(clickedSpace.target).data("type") == "space"){
+      $(clickedSpace.target).text(playerOne);
+    }
   }
 }

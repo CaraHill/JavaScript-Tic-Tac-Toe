@@ -6,8 +6,8 @@
 * Use agile development techniques
 
 ## Summary
-For this challenge, you're going to be writing a JavaScript-heavy codebase. 
-You'll need to keep it organized, readable, and tested. And you'll be doing 
+For this challenge, you're going to be writing a JavaScript-heavy codebase.
+You'll need to keep it organized, readable, and tested. And you'll be doing
 it in pairs.
 
 
@@ -30,10 +30,19 @@ it in pairs.
 > * A user can see a list of their records against the current opponent
 > * Add your own user stories
 
-Before you start coding, decide what your Minimum Viable Product is. What are the features that are absolutely necessary? 
+Before you start coding, decide what your Minimum Viable Product is. What are the features that are absolutely necessary?
 What features can you complete in the time you have?
 
 ***Declare your MVP in your README.md. This should be your first commit.*** As you finish sprints, you should update your README.md
+
+### MVP:
+
+> * A user can see a board
+> * A user can see a styled board
+> * A user can place a piece in a column
+> * Users place alternating pieces on the board (X and O or something of your own design)
+> * Users can't place a piece in a filled space
+> * Users are notified when they win the game
 
 ### Release 2: Build it!
 

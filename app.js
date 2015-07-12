@@ -2,6 +2,8 @@ $(function() {
 
   var rows = 3;
   var columns = 3;
+  var playerOne = "X";
+  var playerTwo = "O";
   var $board = generateBoard(rows, columns);
 
   function generateColumns (columns) {
@@ -31,7 +33,7 @@ $(function() {
     alert("Player 1, please click on the square on which you would like to play your piece.")
     $("#game-board").on("click", "td", function(e) {
       if($(e.target).data("type") == "space"){
-        $(e.target).text("X");
+        $(e.target).text(playerOne);
       }
     })
   })

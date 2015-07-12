@@ -8,7 +8,7 @@ $(function() {
     var $column = $("<tr>");
     var index = columns;
     while(index-- > 0) {
-      $column.append("<td>");
+      $column.append("<td id=space-"+index+">");
     }
     return $column;
   }
@@ -26,4 +26,8 @@ $(function() {
   }
 
   $("#game-board").append($board);
+
+  $(document).on("keyup", function(event) {
+    alert("Player 1, please click on the square on which you would like to play your piece.")
+  })
 })

@@ -20,6 +20,7 @@ TicTacToeGame.prototype = {
     })
     if(winState.length == 3) {
       alert("Player #" +currentPlayer+ " has won the game!")
+      return true
     }
   }
 }

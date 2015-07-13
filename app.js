@@ -32,11 +32,14 @@ $(function() {
   $("#game-board").append($board);
 
   $(document).on("keyup", function(event) {
-    alert("Player #" +currentPlayer+ " , please click on the square on which you would like to play your piece.")
+    alert("Player #1, please click on the square on which you would like to play your piece.")
     $("#game-board").on("click", "td", function(e) {
-      game.placePiece(e, gamePieces[index]);
-      currentPlayer += 1;
-      index += 1;
+      if(game.isFree(e)) {
+        game.placePiece(e, gamePieces[index]);
+        currentPlayer += 1;
+        index += 1;
+        alert("Player #" +currentPlayer+ " , please click on the square on which you would like to play your piece.")
+      }
     })
   })
 })

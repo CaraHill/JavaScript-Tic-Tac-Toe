@@ -9,6 +9,7 @@ TicTacToeGame.prototype = {
     }
   },
   isFree: function(clickedSpace) {
-    $(clickedSpace.target).text().length == 0
+    console.log($(clickedSpace.target).text().length)
+     return $(clickedSpace.target).text().length == 0
   }
 }

@@ -36,4 +36,11 @@ $(function() {
       game.placeX(e, playerOne)
     })
   })
+
+  $(document).on("keyup", function(event) {
+    alert("Player 1, please click on the square on which you would like to play your piece.")
+    $("#game-board").on("click", "td", function(e) {
+      game.placeO(e, playerTwo)
+    })
+  })
 })

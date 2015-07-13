@@ -36,8 +36,8 @@ $(function() {
     $("#game-board").on("click", "td", function(e) {
       if(game.isFree(e)) {
         game.placePiece(e, gamePieces[index]);
-        currentPlayer += 1;
-        index += 1;
+        currentPlayer = (currentPlayer == 1 ? 2 : 1);
+        index = (index == 0 ? 1 : 0);
         alert("Player #" +currentPlayer+ " , please click on the square on which you would like to play your piece.")
       }
     })

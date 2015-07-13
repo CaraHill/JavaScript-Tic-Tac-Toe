@@ -9,7 +9,17 @@ TicTacToeGame.prototype = {
     }
   },
   isFree: function(clickedSpace) {
-    console.log($(clickedSpace.target).text().length)
      return $(clickedSpace.target).text().length == 0
+  },
+  isWonHorizontal: function(clickedSpace, gamePiece, index, currentPlayer) {
+    var winState = [];
+    $(clickedSpace.target).parent().children().each(function() {
+      if($(this).text() == gamePiece[index]) {
+        winState.push(gamePiece[index])
+      }
+    })
+    if(winState.length == 3) {
+      alert("Player #" +currentPlayer+ " has won the game!")
+    }
   }
 }

@@ -8,5 +8,7 @@ TicTacToeGame.prototype = {
       $(clickedSpace.target).text(currentPlayer);
     }
   },
-
+  isFree: function(clickedSpace) {
+    $(clickedSpace.target).text().length == 0
+  }
 }

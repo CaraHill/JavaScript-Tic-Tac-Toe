@@ -2,11 +2,11 @@ $(function() {
 
   var rows = 3;
   var columns = 3;
-  var playerOne = "X";
-  var playerTwo = "O";
+  var gamePieces = ["X", "0"]
   var game = new TicTacToeGame();
   var $board = generateBoard(rows, columns);
-  var currentPlayer = playerOne;
+  var currentPlayer = 1;
+  var index = 0;
 
   function generateColumns (columns) {
     var $column = $("<tr>");
@@ -32,9 +32,11 @@ $(function() {
   $("#game-board").append($board);
 
   $(document).on("keyup", function(event) {
-    alert("Player 1, please click on the square on which you would like to play your piece.")
+    alert("Player #" +currentPlayer+ " , please click on the square on which you would like to play your piece.")
     $("#game-board").on("click", "td", function(e) {
-      game.placePiece(e, currentPlayer)
+      game.placePiece(e, gamePieces[index]);
+      currentPlayer += 1;
+      index += 1;
     })
   })
 })

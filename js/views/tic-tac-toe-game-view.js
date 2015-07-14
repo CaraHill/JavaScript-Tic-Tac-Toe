@@ -9,7 +9,7 @@ TicTacToeGameView.prototype = {
     var index = 0;
     var that = this
     that.boardElement.on("click", "td", function(e) {
-      if(isFree(e)) {
+      if(that.isFree(e)) {
         placePiece(e, that.gamePieces[index]);
         if(isWonHorizontal(e,that.gamePieces, index, currentPlayer)) {
           resetBoard();

@@ -1,7 +1,24 @@
 function TicTacToeGameView() {
-  this.gamePieces = ["X", "O"]
+  this.boardElement = $("#game-board");
+  this.gamePieces = ["X", "O"];
 }
 
 TicTacToeGameView.prototype = {
-
+  registerPlayGameEventHandler: function(e, isFree, placePiece, isWonHorizontal, resetBoard) {
+    var currentPlayer = 1;
+    var index = 0;
+    var that = this
+    that.boardElement.on("click", "td", function(e) {
+      if(isFree(e)) {
+        placePiece(e, that.gamePieces[index]);
+        if(isWonHorizontal(e,that.gamePieces, index, currentPlayer)) {
+          resetBoard();
+        } else {
+          currentPlayer = (currentPlayer == 1 ? 2 : 1);
+          index = (index == 0 ? 1 : 0);
+          alert("Player #" +currentPlayer+ " , please click on the square on which you would like to play your piece.")
+        }
+      }
+    })
+  }
 }

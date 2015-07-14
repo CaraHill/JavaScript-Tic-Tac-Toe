@@ -1,4 +1,4 @@
-function TicTacToeGame() {
+function TicTacToeGameModel() {
 
 }
 

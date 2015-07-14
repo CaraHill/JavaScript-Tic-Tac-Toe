@@ -3,7 +3,7 @@ $(function() {
   var rows = 3;
   var columns = 3;
   var gamePieces = ["X", "0"]
-  var game = new TicTacToeGame();
+  var game = new TicTacToeGameModel();
   var $board = generateBoard(rows, columns);
   var currentPlayer = 1;
   var index = 0;

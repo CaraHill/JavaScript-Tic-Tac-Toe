@@ -1,5 +1,7 @@
 function TicTacToeGameModel() {
-  var placedPieces = [];
+  this.placedPieces = [[null, null, null],
+                      [null, null, null],
+                      [null, null, null]];
 }
 
 TicTacToeGameModel.prototype = {

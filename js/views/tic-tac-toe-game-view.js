@@ -20,5 +20,12 @@ TicTacToeGameView.prototype = {
         }
       }
     })
+  },
+  startTheGame: function(e, isFree, placePiece, isWonHorizontal, resetBoard) {
+    var that = this;
+    $(document).on("keyup", function(event) {
+      alert("Player #1, please click on the square on which you would like to play your piece.")
+      that.registerPlayGameEventHandler(e, isFree, placePiece, isWonHorizontal, resetBoard)
+    })
   }
 }

@@ -8,9 +8,6 @@ TicTacToeGameModel.prototype = {
       $(clickedSpace.target).text(gamePiece);
     }
   },
-  isFree: function(clickedSpace) {
-     return $(clickedSpace.target).text().length == 0
-  },
   isWonHorizontal: function(clickedSpace, gamePiece, index, currentPlayer) {
     var winState = [];
     $(clickedSpace.target).parent().children().each(function() {

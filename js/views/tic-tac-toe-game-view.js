@@ -27,5 +27,8 @@ TicTacToeGameView.prototype = {
       alert("Player #1, please click on the square on which you would like to play your piece.")
       that.registerPlayGameEventHandler(e, isFree, placePiece, isWonHorizontal, resetBoard)
     })
+  },
+  isFree: function(e) {
+    return $(e.target).text().length == 0;
   }
 }

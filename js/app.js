@@ -6,6 +6,6 @@ $(function() {
 
   $board.generateBoard();
 
-  play.startTheGame(event, game.isFree, game.placePiece, game.isWonHorizontal, $board.resetBoard);
+  play.startTheGame(event, play.isFree, game.placePiece, game.isWonHorizontal, $board.resetBoard);
 
 })

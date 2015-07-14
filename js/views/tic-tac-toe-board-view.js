@@ -22,5 +22,10 @@ TicTacToeBoardView.prototype = {
       $board.append($row);
     }
     return $board
+  },
+  resetBoard: function() {
+    var $board = $("#game-board");
+    $board.off();
+    $board.find("tr").children().empty();
   }
 }

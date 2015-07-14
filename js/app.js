@@ -2,7 +2,6 @@ $(function() {
 
   var gamePieces = ["X", "O"]
   var $board = new TicTacToeBoardView();
-  // var $board = board.generateBoard();
   var game = new TicTacToeGameModel();
   var currentPlayer = 1;
   var index = 0;
@@ -15,7 +14,7 @@ $(function() {
       if(game.isFree(e)) {
         game.placePiece(e, gamePieces[index]);
         if(game.isWonHorizontal(e, gamePieces, index, currentPlayer)) {
-          $("#game-board").off()
+          $board.resetBoard();
         } else {
           currentPlayer = (currentPlayer == 1 ? 2 : 1);
           index = (index == 0 ? 1 : 0);

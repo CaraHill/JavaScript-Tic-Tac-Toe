@@ -1,11 +1,11 @@
 function TicTacToeGameModel() {
-
+  var placedPieces = [];
 }
 
 TicTacToeGameModel.prototype = {
-  placePiece: function(clickedSpace, currentPlayer) {
+  placePiece: function(clickedSpace, gamePiece) {
     if($(clickedSpace.target).data("type") == "space"){
-      $(clickedSpace.target).text(currentPlayer);
+      $(clickedSpace.target).text(gamePiece);
     }
   },
   isFree: function(clickedSpace) {

@@ -6,7 +6,7 @@ $(function() {
   var currentPlayer = 1;
   var index = 0;
 
-  $("#game-board").append($board.generateBoard());
+  $board.generateBoard();
 
   $(document).on("keyup", function(event) {
     alert("Player #1, please click on the square on which you would like to play your piece.")

@@ -21,7 +21,7 @@ TicTacToeBoardView.prototype = {
       $row = this.generateColumns(this.column);
       $board.append($row);
     }
-    return $board
+    $("#game-board").append($board);
   },
   resetBoard: function() {
     var $board = $("#game-board");

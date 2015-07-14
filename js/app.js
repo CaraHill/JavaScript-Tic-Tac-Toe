@@ -1,13 +1,13 @@
 $(function() {
 
-  var gamePieces = ["X", "0"]
-  var board = new TicTacToeBoardView();
-  var $board = board.generateBoard();
+  var gamePieces = ["X", "O"]
+  var $board = new TicTacToeBoardView();
+  // var $board = board.generateBoard();
   var game = new TicTacToeGameModel();
   var currentPlayer = 1;
   var index = 0;
 
-  $("#game-board").append($board);
+  $("#game-board").append($board.generateBoard());
 
   $(document).on("keyup", function(event) {
     alert("Player #1, please click on the square on which you would like to play your piece.")

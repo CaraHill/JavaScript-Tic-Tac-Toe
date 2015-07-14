@@ -1,7 +1,6 @@
 function TicTacToeBoardView() {
   this.row = 3;
   this.column = 3;
-  this.gamePieces = ["X", "0"]
 }
 
 TicTacToeBoardView.prototype = {

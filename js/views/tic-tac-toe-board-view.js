@@ -26,6 +26,6 @@ TicTacToeBoardView.prototype = {
   resetBoard: function() {
     var $board = $("#game-board");
     $board.off();
-    $board.find("tr").children().empty();
+    $board.find("td").empty();
   }
 }

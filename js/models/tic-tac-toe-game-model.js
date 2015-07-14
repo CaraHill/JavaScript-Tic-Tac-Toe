@@ -4,9 +4,7 @@ function TicTacToeGameModel() {
 
 TicTacToeGameModel.prototype = {
   placePiece: function(clickedSpace, gamePiece) {
-    if($(clickedSpace.target).data("type") == "space"){
       $(clickedSpace.target).text(gamePiece);
-    }
   },
   isWonHorizontal: function(clickedSpace, gamePiece, index, currentPlayer) {
     var winState = [];
